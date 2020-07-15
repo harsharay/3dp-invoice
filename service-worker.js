@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/3dp-invoice/precache-manifest.eba18a0554b6260c9ef22ab505922b2c.js"
+  "/3dp-invoice/precache-manifest.d616bf2b0afad27b2115482259800b7e.js"
 );
 
 self.addEventListener('message', (event) => {
