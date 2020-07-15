@@ -1,0 +1,67 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.address-label  {
+    margin-right: 125px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+textarea {
+    border: 2px solid #4e0250;
+    transition: 0.2s;
+}
+
+textarea:focus {
+    outline: none !important;
+    border: 2px solid #8fe388;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+button {
+    margin: 40px;
+    font-weight: 600;
+    font-size: medium;
+    background-color: #4e0250;
+    color: white;
+    outline: none;
+    border:0;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #645986;
+    color: white;
+}
+
+.display-invoice {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    background-color: #4e0250;
+    color: white;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    font-weight: 700;
+    font-size: large;
+    cursor: pointer
+}

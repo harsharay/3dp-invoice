@@ -1,0 +1,24 @@
+.form-element {
+    margin: 1%;
+}
+
+
+label {
+    font-size: large;
+    font-weight: 500;
+    color: #4e0250;
+}
+
+
+input[type="text"], input[type="number"]{
+    border-width: 0 0 2px;
+    border-color: #4e0250;
+    padding: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-width: 0 0 2px;
+    border-color: #8fe388;
+}
