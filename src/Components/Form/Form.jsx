@@ -13,6 +13,7 @@ import FirebaseData from "../FirebaseData/FirebaseData"
 const Form = () => {
 
     const [details, setDetails] = useState({
+        customerName: "",
         productName: "",
         quantity: 0,
         indiPrice: 0,
@@ -26,7 +27,12 @@ const Form = () => {
         let fieldName = e.target.name
         let newValue = e.target.value
         setDetails(prevValue => {
-            if(fieldName==="productName"){
+            if(fieldName==="customerName"){
+                return {
+                    ...prevValue,
+                    customerName : newValue
+                }
+            }else if(fieldName==="productName"){
                 return {
                     ...prevValue,
                     productName : newValue
@@ -93,6 +99,7 @@ const Form = () => {
     return (
         <div className="form">
             <h1>Fill this form</h1>
+            <Input inputName="customerName" inputType="text" labelName="Customer Name" onChange={handleChange} value={details.customerName}/>
             <Input inputName="productName" inputType="text" labelName="Product Name" onChange={handleChange} value={details.productName}/>
             <Input inputName="quantity" inputType="number" labelName="Quantity" onChange={handleChange} value={details.quantity}/>
             <Input inputName="indiPrice" inputType="number" labelName="Individual Price" onChange={handleChange} value={details.indiPrice}/>

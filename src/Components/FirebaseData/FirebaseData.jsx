@@ -12,6 +12,7 @@ function FirebaseData({ onClick }) {
         let response = await firestore.collection("invoices").get()
         response.docs.map(item => console.log(item.data()))
         setData(response.docs)
+        
     }
 
     useEffect(() => {
@@ -19,15 +20,16 @@ function FirebaseData({ onClick }) {
     },[])
 
     const displayData = data.map((item,index) => {
-        let { name, invoiceNumber, quantity, pricePerQuantity, finalPrice, address } = item.data()
+        let { name, invoiceNumber, quantity, pricePerQuantity, finalPrice, address, status } = item.data()
         return (
-            <div className="card">
+            <div className="card" key={index}>
                 <h1>{index+1}.{name.toUpperCase()}</h1>
                 <p>Quantity:{quantity}</p>
                 <p>Price per item:₹{pricePerQuantity}</p>
                 <p>Final Price with GST(18%) added:₹{finalPrice}</p>
                 <p>Invoice Number:{invoiceNumber}</p>
                 <p>Address of the customer:{address}</p>
+                <p>Status: {status.toUpperCase()}</p>
             </div>
         )
     })
